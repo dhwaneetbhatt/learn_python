@@ -1,11 +1,11 @@
 from glob_base import Match
 
 class Either(Match):
-    def __init__(self, options, rest=None):
+    def __init__(self, options: list[Match], rest: Match = None):
         super().__init__(rest)
         self.options = options
 
-    def _match(self, text, start=0):
+    def _match(self, text: str, start=0) -> int | None:
         for option in self.options:
             end = option._match(text, start)
             if end is not None:

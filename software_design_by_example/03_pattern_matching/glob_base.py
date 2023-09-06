@@ -1,14 +1,19 @@
+from __future__ import annotations
+
 class Match:
-    def __init__(self, rest):
+    def __init__(self, rest: Match):
         self.rest = rest if rest is not None else Null()
 
-    def match(self, text):
+    def match(self, text: str) -> bool:
         result = self._match(text, 0)
         return result == len(text)
+
+    def _match(self, text: str, start: int) -> int | None:
+        raise NotImplementedError
 
 class Null(Match):
     def __init__(self):
         self.rest = None
 
-    def _match(self, text, start):
+    def _match(self, text: str, start=0) -> int:
         return start

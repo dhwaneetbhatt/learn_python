@@ -1,6 +1,6 @@
 import unittest
-from glob_charset import Charset
-from glob_lit import Lit
+from pattern_matching.glob_charset import Charset
+from pattern_matching.glob_lit import Lit
 
 class TestLitClass(unittest.TestCase):
     def test_match_one_char(self):

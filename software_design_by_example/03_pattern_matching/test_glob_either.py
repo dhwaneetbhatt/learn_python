@@ -1,7 +1,7 @@
 import unittest
 
-from glob_either import Either
-from glob_lit import Lit
+from pattern_matching.glob_either import Either
+from pattern_matching.glob_lit import Lit
 
 class TestEitherMatcher(unittest.TestCase):
     def test_either_two_literals_first(self):

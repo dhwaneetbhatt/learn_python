@@ -1,4 +1,4 @@
-from glob_base import Match
+from pattern_matching.glob_base import Match
 
 class Either(Match):
     def __init__(self, options: list[Match], rest: Match = None):

@@ -1,4 +1,4 @@
-from glob_base import Match
+from pattern_matching.glob_base import Match
 
 class Not(Match):
     def __init__(self, matcher: Match):

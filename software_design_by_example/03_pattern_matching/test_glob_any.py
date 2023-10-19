@@ -1,6 +1,6 @@
 import unittest
-from glob_lit import Lit
-from glob_any import Any
+from pattern_matching.glob_lit import Lit
+from pattern_matching.glob_any import Any
 
 class TestAnyMatcher(unittest.TestCase):
     def test_match_empty_any(self):

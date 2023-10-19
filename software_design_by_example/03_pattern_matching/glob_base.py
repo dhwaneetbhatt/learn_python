@@ -4,6 +4,13 @@ class Match:
     def __init__(self, rest: Match):
         self.rest = rest if rest is not None else Null()
 
+    def __eq__(self, other: Match):
+        return (
+            other is not None
+            and self.__class__ == other.__class__
+            and self.rest == other.rest
+        )
+
     def match(self, text: str) -> bool:
         result = self._match(text, 0)
         return result == len(text)
